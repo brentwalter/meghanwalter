@@ -583,7 +583,7 @@ class Language_Pack_Upgrader_Skin extends WP_Upgrader_Skin {
 /**
  * Upgrader Skin for Automatic WordPress Upgrades
  *
- * This skin is designed to be used when no output is intended, all output 
+ * This skin is designed to be used when no output is intended, all output
  * is captured and stored for the caller to process and log/email/discard.
  *
  * @package WordPress
@@ -591,7 +591,7 @@ class Language_Pack_Upgrader_Skin extends WP_Upgrader_Skin {
  * @since 3.7.0
  */
 class Automatic_Upgrader_Skin extends WP_Upgrader_Skin {
-	private $messages = array();
+	protected $messages = array();
 
 	function request_filesystem_credentials( $error = false, $context = '' ) {
 		if ( $context )
