@@ -230,7 +230,7 @@ jQuery(document).ready(function() {
 		
 		// Header Search Bar
 		jQuery('#search-toggle').click(function(){
-			jQuery('#header-wrap-outer #menu-main').fadeToggle();
+			jQuery('#header-wrap-outer #menu-primary').fadeToggle();
 			jQuery('#header-wrap-outer #searchbar').fadeToggle();
 			jQuery('#header-wrap-outer #searchbar .search-form .s ').focus();
 			

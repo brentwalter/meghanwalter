@@ -1,0 +1,103 @@
+/*
+ Theme Name:     TopShop Child - Modification for MeghanWalter.com
+ Theme URI:      http://meghanwalter.com
+ Description:    Child - Modification for MeghanWalter.com
+ Author:         Brent Walter
+ Author URI:     http:/brentwalter.com
+ Template:       topshop
+ Version:        1.0.0
+*/
+
+@import url("../topshop/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/* top bar */
+#top-container {
+    background: none repeat scroll 0 0 #eceae8;
+}
+
+
+/* header / logo */
+#header-wrap-outer {
+	margin-bottom:60px;
+}
+#header-wrap {
+    border-bottom: 1px solid #e7e7e7;
+}
+.icon-logo {
+	background: url(img/sprite423x107.png) -18px 0 no-repeat;
+	display: inline-block;
+	height:25px;
+	width:274px;
+}
+
+
+/* navigation */
+#main-menu-wrap {
+	border-top: 1px solid #e7e7e7;
+	height:64px;
+}
+#main-menu {
+	text-align: center;
+}
+#searchbar {
+	left:77px;
+	z-index: 3;
+	background: #fff;
+}
+ul.nav {
+	display:inline-block;
+	float:none;
+}
+ul.nav li a {
+	margin-right:15px;
+}
+ul.nav li a {
+	font-size:16px;
+}
+.search-form .s {
+	border-left:none;
+	border-right: 1px solid #e7e7e7;
+}
+#mobile_nav {
+	float:none;
+}
+.cart_subtotal {
+	display:none;
+}
+@media only screen and (max-width: 767px) {
+	#mobile_nav { display:inline-block; }
+}
+#menu-search-wrap {
+    float: left;
+    border-right: 1px solid #e7e7e7;
+}
+#main-menu-wrap #cart-menu-inner {
+	border-right: 1px solid #e7e7e7;
+	padding-right: 15px;
+	padding-left:7px;
+}
+.icon-basket:before {
+	content: '';
+}
+.icon-basket {
+	background: url(img/sprite423x107.png) -329px -40px no-repeat;
+	display:inline-block;
+	height:22px;
+	width:18px;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6, ul.nav li a, #cart-menu-inner a.menu-link, ul.nav li.megamenu ul li a, .summary .price, .product .price, #header-wrap-outer #main-menu-wrap .amount, p.quote, div.product .woocommerce-tabs ul.tabs li a, .product a h3, .product_list_widget a, .product_list_widget .amount, blockquote p { 
+	font-family: 'Lato' !important; 
+}
+
+
+/* utility */
+.ir {
+	overflow: hidden;
+	text-indent: -9999999px;
+}

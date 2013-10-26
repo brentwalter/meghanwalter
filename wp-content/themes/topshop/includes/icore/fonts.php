@@ -107,6 +107,12 @@ function icore_google_fonts() {
             'parameter' => '',
             'font-family' => 'sans-serif'
         ),
+        'Lato' => array(
+        	'name' => 'Lato',
+			'title' => 'Lato',
+            'parameter' => '300',
+            'font-family' => 'sand-serif'
+        ),
         'Lora' => array(
 			'name' => 'Lora',
 			'title' => 'Lora',
