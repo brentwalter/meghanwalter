@@ -167,55 +167,57 @@ jQuery(document).ready(function() {
 	});
 
 	// Social Media Icons / Sharre
-	jQuery('#twitter').sharrre({
-	        share: {
-	            twitter: true
-	        },
-	        template: '<a class="share" href="#"><div class="icon-twitter"></div></a>',
-	        enableHover: false,
-	        click: function(api, options){
-	            api.simulateClick();
-	            api.openPopup('twitter');
-	        }
-	    });
-
-	    jQuery('#facebook').sharrre({
-	        share: {
-	            facebook: true
-	        },
-	        template: '<a class="share" href="#"><div class="icon-facebook"></div></a>',
-	        enableHover: false,
-	        click: function(api, options){
-	            api.simulateClick();
-	            api.openPopup('facebook');
-	        }
-		});
-
-		jQuery('#pinterest').sharrre({
-	        share: {
-	            pinterest: true
-	        },
-	        template: '<a class="share" href="#"><div class="icon-pinterest"></div></a>',
-	        enableHover: false,
-			urlCurl: '',
-	        click: function(api, options){
-	            api.simulateClick();
-	            api.openPopup('pinterest');
-	        }
-		});
-
-		jQuery('#googleplus').sharrre({
-	        share: {
-	            googlePlus: true
-	        },
-	        template: '<a class="share" href="#"><div class="icon-google-plus"></div></a>',
-	        enableHover: false,
-			urlCurl: '',
-	        click: function(api, options){
-	            api.simulateClick();
-	            api.openPopup('googlePlus');
-	        }
-		});
+	if ( jQuery.fn.sharrre ) {
+		jQuery('#twitter').sharrre({
+		        share: {
+		            twitter: true
+		        },
+		        template: '<a class="share" href="#"><div class="icon-twitter"></div></a>',
+		        enableHover: false,
+		        click: function(api, options){
+		            api.simulateClick();
+		            api.openPopup('twitter');
+		        }
+		    });
+	
+		    jQuery('#facebook').sharrre({
+		        share: {
+		            facebook: true
+		        },
+		        template: '<a class="share" href="#"><div class="icon-facebook"></div></a>',
+		        enableHover: false,
+		        click: function(api, options){
+		            api.simulateClick();
+		            api.openPopup('facebook');
+		        }
+			});
+	
+			jQuery('#pinterest').sharrre({
+		        share: {
+		            pinterest: true
+		        },
+		        template: '<a class="share" href="#"><div class="icon-pinterest"></div></a>',
+		        enableHover: false,
+				urlCurl: '',
+		        click: function(api, options){
+		            api.simulateClick();
+		            api.openPopup('pinterest');
+		        }
+			});
+	
+			jQuery('#googleplus').sharrre({
+		        share: {
+		            googlePlus: true
+		        },
+		        template: '<a class="share" href="#"><div class="icon-google-plus"></div></a>',
+		        enableHover: false,
+				urlCurl: '',
+		        click: function(api, options){
+		            api.simulateClick();
+		            api.openPopup('googlePlus');
+		        }
+			});
+		}
 
 		//Sortable portfolio menu
 		jQuery('.portfolio-tabs a').click(function(e){
