@@ -64,9 +64,9 @@
 					<?php icore_search_bar(); ?>
 					<?php icore_nav_menu('primary-menu', 'nav sf'); ?>
 					<?php echo '<a href="#" id="mobile_nav" class="closed">' . '<span class="icon-menu-3"></span>' /*. esc_html__( 'Menu', 'TopShop' )*/ . '</a>'; ?>
-					<?php// if ( class_exists('woocommerce') && $theme_options['catalog'] == 'no' ) {
-						echo icore_woocommerce_cart_menu();
-					//} ?>
+					<?php if ( class_exists('woocommerce') && $theme_options['catalog'] == 'no' ) {
+						//echo icore_woocommerce_cart_menu();
+					} ?>
 					<a href="http://www.pinterest.com/MeghanAWalter/" class="rightNavBlock">
 						<i class="pinterestNav ir">Visit my Pinterest page</i>
 					</a>
