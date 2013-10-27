@@ -168,7 +168,7 @@ jQuery(document).ready(function() {
 
 	// Social Media Icons / Sharre
 	if ( jQuery.fn.sharrre ) {
-		jQuery('#twitter').sharrre({
+		jQuery('.twitter').sharrre({
 		        share: {
 		            twitter: true
 		        },
@@ -180,7 +180,7 @@ jQuery(document).ready(function() {
 		        }
 		    });
 	
-		    jQuery('#facebook').sharrre({
+		    jQuery('.facebook').sharrre({
 		        share: {
 		            facebook: true
 		        },
@@ -192,7 +192,7 @@ jQuery(document).ready(function() {
 		        }
 			});
 	
-			jQuery('#pinterest').sharrre({
+			jQuery('.pinterest').sharrre({
 		        share: {
 		            pinterest: true
 		        },
@@ -205,7 +205,7 @@ jQuery(document).ready(function() {
 		        }
 			});
 	
-			jQuery('#googleplus').sharrre({
+			jQuery('.googleplus').sharrre({
 		        share: {
 		            googlePlus: true
 		        },

@@ -53,13 +53,16 @@ $location = icore_get_location();
 			            'post_parent' => $post->ID,
 			            'exclude'     => get_post_thumbnail_id()
 			        ) );
-			 
+						
 			        if ( $attachments ) {
 			            foreach ( $attachments as $attachment ) {
 			            	//echo print_r( $attachment );
 			            	//echo print_r( wp_get_attachment_metadata( $attachment->ID ) );
+			            	$options = array(
+								'alt'   => trim(strip_tags( get_post_meta($attachment->ID, '_wp_attachment_image_alt', true) )),
+							);
 			                $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-			                $title = wp_get_attachment_image( $attachment->ID, $attachment->post_content );
+			                $title = wp_get_attachment_image( $attachment->ID, $attachment->post_content, false, $options );
 			                echo '<div class="contain_'. $attachment->post_content. '">'. $title .'</div>';
 			            }
 			             
@@ -78,12 +81,12 @@ $location = icore_get_location();
 					</div>
 					<div class="social">
 						<h4 class="share-single-text"><?php _e('Share:', 'TopShop'); ?></h4>
-						<div id="twitter" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></div>
-						<div id="facebook" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Share"></div>
+						<div class="twitter" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></div>
+						<div class="facebook" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Share"></div>
 						<!-- <div id="pinterest" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Pin"></div> -->
 						<div><a href="javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());" class="share"><div class="icon-pinterest"></div></a></div>
 						
-						<div id="googleplus" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Share"></div>
+						<div class="googleplus" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Share"></div>
 					</div><!-- /social -->
 				</div>
 

@@ -132,6 +132,7 @@ a:hover .pinterestNav {
 
 /* article */
 #left { width:100%; }
+article { margin-bottom:64px; }
 .active-sidebar #left {
     width: 100%;
 }
