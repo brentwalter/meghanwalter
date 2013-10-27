@@ -172,6 +172,15 @@ a:hover .pinterestNav {
 .imageWaterfall .contain_half-width-portrait + .contain_half-width-portrait {
 	margin-left:1%;
 }
+.imageWaterfall .contain_third-width-landscape,
+.imageWaterfall .contain_third-width-portrait {
+	width:32.6%;
+	float:left;
+}
+.imageWaterfall .contain_third-width-landscape + .contain_third-width-landscape,
+.imageWaterfall .contain_third-width-portrait + .contain_third-width-portrait {
+	margin-left:1%;
+}
 .sources { 
 	text-align: center; 
 }
@@ -256,6 +265,15 @@ a:hover .pinterestNav {
 	background: url(img/sprite423x107.png) -328px -67px no-repeat;
 	vertical-align: -5px;
 	margin-right:5px;
+}
+
+/* comments */
+#commentbox {
+	font-weight: 300;
+}
+#commentbox h3 {
+	font-size: 20px;
+	font-weight: 300;
 }
 
 
