@@ -46,10 +46,7 @@
 					    <?php if ( $wp_query->have_posts() ) : ?>
 								
 							<?php while ( $wp_query->have_posts() ) : $wp_query->the_post();
-				    	 			//the_post_thumbnail( "full", array(
-									//	'class'	=> "featuredImage",
-									//	'alt'	=> trim(strip_tags( $wp_postmeta->_wp_attachment_image_alt ))
-									//) );
+				    	 			
 									get_template_part( 'content', get_post_format() ); 
 							endwhile;?>
 							

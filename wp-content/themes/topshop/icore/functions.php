@@ -187,20 +187,21 @@ function icore_nav_menu($location = 'primary-menu', $menuClass = 'nav sf', $desc
         $menu = wp_nav_menu(array('theme_location' => $location, 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false ));
     } else { 
 		if (function_exists('wp_nav_menu') && $description == 'desc_on') { 
-                    $menu = wp_nav_menu(array('theme_location' => $location, 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false, 'walker' => new icore_menudesc() ));
-                            } }
+        	$menu = wp_nav_menu(array('theme_location' => $location, 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false, 'walker' => new icore_menudesc() ));
+        } 
+   }
 
-                if($menu != '') { 
-                    echo $menu; 
-				} else { ?>
-                    <ul class="<?php echo $menuClass; ?>">
-                        <li>
-                    
-                    <?php echo '<a href="' . home_url() . '/wp-admin/nav-menus.php">Create menu</a>'; ?>
-                     </li>
-                     </ul>
-                     <?php
-                } 
+    if($menu != '') { 
+        echo $menu; 
+	} else { ?>
+        <ul class="<?php echo $menuClass; ?>">
+            <li>
+        
+        <?php echo '<a href="' . home_url() . '/wp-admin/nav-menus.php">Create menu</a>'; ?>
+         </li>
+         </ul>
+         <?php
+    } 
 } 
 
 // Print search bar

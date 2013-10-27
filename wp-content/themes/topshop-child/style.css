@@ -13,6 +13,8 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+body { color: #514d4a; }
+
 /* top bar */
 #top-container {
     background: none repeat scroll 0 0 #eceae8;
@@ -43,9 +45,29 @@
 	text-align: center;
 }
 #searchbar {
-	left:77px;
+	left:78px;
 	z-index: 3;
 	background: #fff;
+}
+.search-toggle {
+	border-right: 1px solid #ebebeb;
+}
+.search-form { position: relative; }
+.search-form .searchsubmit {
+    display: block;
+}
+.search-form .searchsubmit {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #3D3D3D;
+    font-size: 25px;
+    position: absolute;
+    right: 1px;
+    top: -10px;
+    height:64px;
+}
+.search-form .searchsubmit:hover {
+	background: #fff;
+	color: #2ABBF2;
 }
 ul.nav {
 	display:inline-block;
@@ -88,6 +110,154 @@ ul.nav li a {
 	height:22px;
 	width:18px;
 }
+.rightNavBlock {
+	border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    float: right;
+    height: 17px;
+    padding: 24px 25px 24px 25px;
+    width: 25px;
+}
+.pinterestNav {
+	display: block;
+	height:20px;
+	width:20px;
+	background: url(img/sprite423x107.png) -378px -67px no-repeat;
+}
+a:hover .pinterestNav {
+	background-position: -378px -87px;
+}
+
+/* article */
+#left { width:100%; }
+.active-sidebar #left {
+    width: 100%;
+}
+.index-thumb { 
+	float:none; 
+	margin-top:0;
+}
+.single .index-thumb { margin-top:-20px; }
+.articleHead {
+	text-align: center;
+	width:60%;
+	margin:0 auto;
+	padding:30px 5% 0;
+	background: #fff;
+	position: relative;
+	top:-30px;
+}
+.articleHead .title {
+	font-weight: 300;
+	font-size: 31px;
+	margin:0 0 5px 0;
+}
+.articleHead .date { 
+	font-size:12px; 
+	font-family: "Lato", sans-serif;
+}
+.articleContent {
+	width:60%;
+	font-size:13px;
+	line-height: 1.6em;
+	margin: 0 auto;
+}
+.imageWaterfall { margin-top:50px; }
+.imageWaterfall .contain_half-width-landscape,
+.imageWaterfall .contain_half-width-portrait {
+	width:49.5%;
+	float:left;
+}
+.imageWaterfall .contain_half-width-landscape + .contain_half-width-landscape,
+.imageWaterfall .contain_half-width-portrait + .contain_half-width-portrait {
+	margin-left:1%;
+}
+.sources { 
+	text-align: center; 
+}
+.sources p { font-family: 'Lato', sans-serif; }
+.category {
+	font-size:13px;
+	text-transform: uppercase;
+	font-family: "Lato", sans-serif;
+}
+.category i {
+	display: block;
+	height:40px;
+	margin:0 auto 2px;
+	background-image: url(img/sprite423x107.png);
+	background-repeat: none;
+}
+/* sprite: first row */
+.category i.books {
+	background-position: -260px -27px;
+	width:60px;
+}
+/*sprite: second row */
+.category i.celebrations {
+	background-position: -248px -67px;
+	width:60px;
+}
+.category i.fashion_style {
+	background-position: -204px -27px;
+	width:51px;
+}
+.category i.food_drink {
+	background-position: -203px -67px;
+	width:38px;
+}
+.category i.hair_beauty {
+	background-position: -5px -67px;
+	width:24px;
+}
+.category i.health_fitness {
+	background-position: -38px -67px;
+	width:70px;
+}
+.category i.home_garden {
+	background-position: -120px -67px;
+	width:26px;
+}
+/*
+.category i.jewelry {
+	background-position: -260px -27px;
+	width:60px;
+}
+*/
+.category i.life {
+	background-position: -157px -67px;
+	width:36px;
+}
+.category i.playlists {
+	background-position: -23px -27px;
+	width:35px;
+}
+.category i.travel_adventrue {
+	background-position: -67px -27px;
+	width:84px;
+}
+.category i.videos {
+	background-position: -159px -27px;
+	width:40px;
+}
+#sharrre .comment {
+	float:left;
+	font-family: 'Lato', sans-serif;
+}
+#sharrre .social {
+	float:right;
+	width:156px;
+	margin-top:4px;
+}
+.sprite-comment {
+	display: inline-block;
+	height:19px;
+	width:20px;
+	background: url(img/sprite423x107.png) -328px -67px no-repeat;
+	vertical-align: -5px;
+	margin-right:5px;
+}
+
 
 
 /* typography */

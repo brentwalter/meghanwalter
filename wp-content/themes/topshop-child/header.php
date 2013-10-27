@@ -31,16 +31,16 @@
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'> -->
-
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 	<div id="header-wrap-outer">
 		<div id="top-container">
-			<div id="top-menu-wrap" class="container">
+			<!--
+<div id="top-menu-wrap" class="container">
 				<?php icore_nav_menu('top-menu', 'top', 'desc_off'); ?>
 			</div>
+-->
 		</div>  <!-- #top-container  -->
 		<div id="header-wrap">
 			<div id="header-inner-wrap"<?php ufo_header_image(); ?>>
@@ -63,10 +63,13 @@
 					<div id="main-menu" class="container">
 					<?php icore_search_bar(); ?>
 					<?php icore_nav_menu('primary-menu', 'nav sf'); ?>
-					<?php echo '<a href="#" id="mobile_nav" class="closed">' . '<span class="icon-menu-3"></span>' . esc_html__( 'Menu', 'TopShop' ) . '</a>'; ?>
-					<?php if ( class_exists('woocommerce') && $theme_options['catalog'] == 'no' ) {
+					<?php echo '<a href="#" id="mobile_nav" class="closed">' . '<span class="icon-menu-3"></span>' /*. esc_html__( 'Menu', 'TopShop' )*/ . '</a>'; ?>
+					<?php// if ( class_exists('woocommerce') && $theme_options['catalog'] == 'no' ) {
 						echo icore_woocommerce_cart_menu();
-					} ?>
+					//} ?>
+					<a href="http://www.pinterest.com/MeghanAWalter/" class="rightNavBlock">
+						<i class="pinterestNav ir">Visit my Pinterest page</i>
+					</a>
 					</div>
 			    </div><!-- #main-menu-wrap -->
 		</div> <!-- #header-wrap -->
@@ -78,6 +81,7 @@
 			<?php get_template_part( '/includes/' . $slider_part ); ?>
 		</div><!-- #slider-wrap -->
 	<?php } ?>
+<!--
 	<div id="woo-ordering-wrap">
 		<div id="woo-ordering" class="container">
 			<?php do_action('woo_breadcrumbs'); ?>
@@ -113,7 +117,7 @@
 					<?php previous_post_link( '<div class="alignleft pagination-prev">%link</div>',  _x( '<div class="icon-arrow-left"></div>', 'Previous post link', 'TopShop' ) ); ?>
 					<?php next_post_link( '<div class="alignright pagination-next">%link</div>', _x( '<div class="icon-arrow-right-2"></div>', 'Next post link', 'TopShop' ) ); ?>
 				</div><!-- .portfolio-nav -->
-			<?php } ?>
+<!--			<?php } ?>
 			<?php if ( 'portfolio' == get_post_type() && ! is_single() && ! is_tax('pcategory') && ! is_tax('ptag') && ! is_search() || is_page_template('page-portfolio-3.php') || is_page_template('page-portfolio-2.php') || is_page_template('page-portfolio-1.php') || is_page_template('page-portfolio-4.php') ) : ?>
 				<?php
 				$portfolio_category = get_terms('pcategory');
@@ -128,7 +132,7 @@
 				<?php endif; ?>
 			<?php endif; ?>
 		</div><!-- #woo-ordering -->
-	</div><!-- #woo-ordering-wrap -->
+<!--	</div><!-- #woo-ordering-wrap -->
 	
 	<div class="wrapper container">
 		<div class="wrap-inside">
