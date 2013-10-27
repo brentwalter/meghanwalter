@@ -72,12 +72,14 @@ body { color: #514d4a; }
 ul.nav {
 	display:inline-block;
 	float:none;
+	margin:0;
 }
+ul.nav li { margin: 0; }
 ul.nav li a {
-	margin-right:15px;
-}
-ul.nav li a {
+	/* margin-right:15px; */
+	margin:0 7px;
 	font-size:16px;
+	font-weight: 300;
 }
 .search-form .s {
 	border-left:none;
@@ -252,10 +254,11 @@ a:hover .pinterestNav {
 #sharrre .comment {
 	float:left;
 	font-family: 'Lato', sans-serif;
+	margin-left:5px;
 }
 #sharrre .social {
 	float:right;
-	width:156px;
+	width:160px;
 	margin-top:4px;
 }
 .sprite-comment {
