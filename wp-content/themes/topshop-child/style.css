@@ -291,5 +291,13 @@ h1, h2, h3, h4, h5, h6, ul.nav li a, #cart-menu-inner a.menu-link, ul.nav li.meg
 /* utility */
 .ir {
 	overflow: hidden;
-	text-indent: -9999999px;
+	text-indent: -9999px;
+}
+.meghancarterSignature {
+	display: inline-block;
+	height:133px;
+	width:150px;
+	background: url(img/mSignature150x133.png) no-repeat;
+	overflow: hidden;
+	text-indent: -9999px
 }
