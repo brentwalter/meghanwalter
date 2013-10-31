@@ -30,6 +30,7 @@
 	?></title>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/modernizr-2.6.2.custom.min.js"></script>
 
 <?php wp_head(); ?>
 </head>

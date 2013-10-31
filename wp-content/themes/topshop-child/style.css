@@ -29,10 +29,13 @@ body { color: #514d4a; }
     border-bottom: 1px solid #e7e7e7;
 }
 .icon-logo {
-	background: url(img/sprite423x107.png) -18px 0 no-repeat;
+	background: url(img/sprite423x107.png) 0 0 no-repeat;
 	display: inline-block;
-	height:25px;
-	width:274px;
+	height:27px;
+	width:299px;
+}
+.svg .icon-logo {
+	background: url(img/Meghan-Walter-Logo-300.svg) 0 0 no-repeat;
 }
 
 
@@ -132,7 +135,7 @@ a:hover .pinterestNav {
 
 /* article */
 #left { width:100%; }
-article { margin-bottom:64px; }
+article { margin-bottom:90px; }
 .active-sidebar #left {
     width: 100%;
 }
@@ -165,7 +168,7 @@ article { margin-bottom:64px; }
 	line-height: 1.6em;
 	margin: 0 auto;
 }
-.imageWaterfall { margin-top:50px; }
+.imageWaterfall { margin-top:18px; }
 .imageWaterfall .contain_half-width-landscape,
 .imageWaterfall .contain_half-width-portrait {
 	width:49.5%;
@@ -187,7 +190,11 @@ article { margin-bottom:64px; }
 .sources { 
 	text-align: center; 
 }
-.sources p { font-family: 'Lato', sans-serif; }
+.sources p { 
+	font-family: 'Lato', sans-serif; 
+	padding:0;
+	line-height: 1.5em;
+}
 .category {
 	font-size:13px;
 	text-transform: uppercase;
@@ -283,8 +290,16 @@ article { margin-bottom:64px; }
 
 
 /* typography */
+/*
 h1, h2, h3, h4, h5, h6, ul.nav li a, #cart-menu-inner a.menu-link, ul.nav li.megamenu ul li a, .summary .price, .product .price, #header-wrap-outer #main-menu-wrap .amount, p.quote, div.product .woocommerce-tabs ul.tabs li a, .product a h3, .product_list_widget a, .product_list_widget .amount, blockquote p { 
 	font-family: 'Lato' !important; 
+}
+*/
+.articleContent a {
+	color:#379bc2;
+}
+.articleContent a:hover {
+	color:#2ABBF2;
 }
 
 
@@ -292,6 +307,24 @@ h1, h2, h3, h4, h5, h6, ul.nav li a, #cart-menu-inner a.menu-link, ul.nav li.meg
 .ir {
 	overflow: hidden;
 	text-indent: -9999px;
+}
+/*
+	Wrap YouTube video in <div class="youTubeHolder">
+	Add class .youTube to the YouTube embed iframe
+*/
+.youTubeHolder {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top:30px;
+	height:0;
+	overflow: hidden;
+}
+iframe.youTube {
+	height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .meghancarterSignature {
 	display: inline-block;
