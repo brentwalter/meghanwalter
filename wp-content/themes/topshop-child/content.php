@@ -64,7 +64,7 @@ $location = icore_get_location();
 			                
 			                $image_meta = get_post_custom($attachment->ID);
 			                
-			                if ( $image_meta['image_waterfall_layout'][0] ) {
+			                if ( isset($image_meta['image_waterfall_layout']) ) {
 								$waterfall_layout = $image_meta['image_waterfall_layout'][0];
 							} else {
 								$waterfall_layout = 'full';
