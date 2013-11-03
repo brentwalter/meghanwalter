@@ -61,11 +61,18 @@ $location = icore_get_location();
 			            	$options = array(
 								'alt'   => trim(strip_tags( get_post_meta($attachment->ID, '_wp_attachment_image_alt', true) )),
 							);
-			                $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-			                $title = wp_get_attachment_image( $attachment->ID, $attachment->post_content, false, $options );
-			                echo '<div class="contain_'. $attachment->post_content. '">'. $title .'</div>';
-			            }
-			             
+			                
+			                $image_meta = get_post_custom($attachment->ID);
+							$waterfall_layout = $image_meta['image_waterfall_layout'][0];
+			               
+			                $image = wp_get_attachment_image( $attachment->ID, $waterfall_layout, false, $options );
+			                $image_link = wp_get_attachment_link( $attachment->ID, '' , true, false, $image ); 
+			                
+			                $output = '<div class="contain_'. $waterfall_layout .'">'. $image_link .'</div>';
+			                
+			                echo $output;
+			               
+						}
 			        }
 			    ?>
 			    <div style="clear:both"></div>

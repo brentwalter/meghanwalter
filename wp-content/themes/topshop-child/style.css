@@ -278,9 +278,15 @@ article { margin-bottom:90px; }
 	margin-right:5px;
 }
 
+/* image article */
+p.attachment, .attachment p { text-align:center; }
+
 /* comments */
 #commentbox {
 	font-weight: 300;
+}
+#commentbox p {
+	text-align: left;
 }
 #commentbox h3 {
 	font-size: 20px;
