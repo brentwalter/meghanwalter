@@ -63,7 +63,12 @@ $location = icore_get_location();
 							);
 			                
 			                $image_meta = get_post_custom($attachment->ID);
-							$waterfall_layout = $image_meta['image_waterfall_layout'][0];
+			                
+			                if ( $image_meta['image_waterfall_layout'][0] ) {
+								$waterfall_layout = $image_meta['image_waterfall_layout'][0];
+							} else {
+								$waterfall_layout = 'full';
+							}
 			               
 			                $image = wp_get_attachment_image( $attachment->ID, $waterfall_layout, false, $options );
 			                $image_link = wp_get_attachment_link( $attachment->ID, '' , true, false, $image ); 
