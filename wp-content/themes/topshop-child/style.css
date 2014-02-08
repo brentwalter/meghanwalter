@@ -162,8 +162,55 @@ article { margin-bottom:90px; }
 	font-size:12px; 
 	font-family: "Lato", sans-serif;
 }
+.rowText, .rowCaption { 
+	width:60%; 
+	margin:0 auto !important;
+	padding-bottom:50px;
+}
+.row.rowText p, .row.rowCaption p {
+	padding-bottom:20px;
+}
+.rowCaption {
+	background: #fff;
+	padding: 30px 5% 0;
+	position: relative;
+	top:-30px;	
+}
+
+.row p { padding:0; }
+.row { 
+	font-size:0; 
+	margin-left:-10px;
+}
+.pixgridder .column {
+	display:inline-block;
+	float:none;
+	font-size:13px;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding: 0 0 0 10px;
+}
+.pixgridder [data-cols="2"] [data-col="1"] {
+	width:50%;
+}
+.pixgridder [data-cols="3"] [data-col="1"] {
+	width:33.33%;
+}
+@media (max-width:560px) {
+	.articleHead, .rowCaption, .rowText {
+		top:0;
+		width:90%;
+	}
+	.articleHead { padding: 15px 0; }
+	.rowCaption { padding:15px 0; }
+	.rowText { padding:15px 0; }
+	.pixgridder .row { text-align: center; }
+	.pixgridder .column { width:100% !important; }
+}
+
+
 .articleContent {
-	width:60%;
+	width:100%;
 	font-size:13px;
 	line-height: 1.6em;
 	margin: 0 auto;

@@ -46,7 +46,7 @@ $location = icore_get_location();
 				</div>
 				
 				<div class="imageWaterfall">
-				<?php
+				<!--<?php/*
 					$attachments = get_posts( array(
 			            'post_type' => 'attachment',
 			            'posts_per_page' => -1,
@@ -79,7 +79,7 @@ $location = icore_get_location();
 			               
 						}
 			        }
-			    ?>
+			    */?>-->
 			    <div style="clear:both"></div>
 				</div>
 				

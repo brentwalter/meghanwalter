@@ -1,0 +1,12 @@
+html {
+	background: #f0f0f0;
+}
+html .mceContentBody {
+	background: #ffffff;
+	margin: auto;
+	padding: 20px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
