@@ -31,7 +31,7 @@
 					</div>
                     
                     <div class="imageWaterfall">
-					<?php
+					<!--<?php/*
 						$attachments = get_posts( array(
 			            'post_type' => 'attachment',
 			            'posts_per_page' => -1,
@@ -59,7 +59,7 @@
 			               
 						}
 			        }
-				    ?>
+				    */?>-->
 					</div>
 					
 					<div class="sources">
